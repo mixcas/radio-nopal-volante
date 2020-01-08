@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0f0bc6be390b451ba9b467347d0007f6",
+    "revision": "f8511bd32f7fe367b7f9d06ea2e3324e",
     "url": "/radio-nopal-volante/index.html"
   },
   {
-    "revision": "091e52aabd4fad72f13f",
-    "url": "/radio-nopal-volante/static/css/main.4cc3e84b.chunk.css"
+    "revision": "e5320cae4a37767e4e2c",
+    "url": "/radio-nopal-volante/static/css/main.dc791f60.chunk.css"
   },
   {
     "revision": "62c7c5b4a7585af349ca",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/radio-nopal-volante/static/js/2.495bb56f.chunk.js.LICENSE"
   },
   {
-    "revision": "091e52aabd4fad72f13f",
+    "revision": "e5320cae4a37767e4e2c",
     "url": "/radio-nopal-volante/static/js/main.782dba59.chunk.js"
   },
   {
