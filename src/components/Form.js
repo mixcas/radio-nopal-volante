@@ -2,11 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setFieldValue, setErrors } from 'actions/flyerActions'
 import TextField from '@material-ui/core/TextField'
-import Divider from '@material-ui/core/Divider'
 
 const FlyerForm  = ({
   day,
   time,
+  title,
   identifier,
   description,
   color1,
@@ -50,6 +50,18 @@ const FlyerForm  = ({
         <TextField
           margin='normal'
           fullWidth
+          id='title'
+          label='Titulo'
+          name='title'
+          onChange={ e => setFieldValue('title', e.target.value) }
+          value={title}
+        />
+      </div>
+
+      <div>
+        <TextField
+          margin='normal'
+          fullWidth
           id='identifier'
           label='Identificador'
           name='identifier'
@@ -70,8 +82,6 @@ const FlyerForm  = ({
           value={description}
         />
       </div>
-
-      <Divider />
 
       <div>
         <TextField
@@ -161,6 +171,7 @@ const mapStateToProps = ({ flyer }) => {
   const {
     day,
     time,
+    title,
     identifier,
     description,
     color1,
@@ -174,6 +185,7 @@ const mapStateToProps = ({ flyer }) => {
   return {
     day,
     time,
+    title,
     identifier,
     description,
     color1,

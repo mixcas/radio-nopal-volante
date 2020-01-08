@@ -1,5 +1,4 @@
 import React from 'react'
-import FlyerForm from 'components/Form'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -8,12 +7,12 @@ import Box from '@material-ui/core/Box'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import Divider from '@material-ui/core/Divider'
 import Container from '@material-ui/core/Container'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
 import Link from '@material-ui/core/Link'
 import './App.css'
+
+import FlyerForm from 'components/Form'
+import Flyer from 'components/Flyer'
 
 function Copyright() {
 	return (
@@ -113,7 +112,6 @@ const useStyles = makeStyles(theme => ({
 
 const App = () => {
 	const classes = useStyles()
-	const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight)
 
 	return (
 		<div className={classes.root}>
@@ -122,7 +120,7 @@ const App = () => {
 			<AppBar position="absolute" className={classes.appBar}>
 				<Toolbar className={classes.toolbar}>
 					<Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-						Dashboard
+						Radio Nopal - Volantito
 					</Typography>
 				</Toolbar>
 			</AppBar>
@@ -140,23 +138,7 @@ const App = () => {
 			<main className={classes.content}>
 				<div className={classes.appBarSpacer} />
 				<Container maxWidth="lg" className={classes.container}>
-					<Grid container spacing={3}>
-						{/* Chart */}
-						<Grid item xs={12} md={8} lg={9}>
-							<Paper className={fixedHeightPaper}>
-							</Paper>
-						</Grid>
-						{/* Recent Deposits */}
-						<Grid item xs={12} md={4} lg={3}>
-							<Paper className={fixedHeightPaper}>
-							</Paper>
-						</Grid>
-						{/* Recent Orders */}
-						<Grid item xs={12}>
-							<Paper className={classes.paper}>
-							</Paper>
-						</Grid>
-					</Grid>
+          <Flyer/>
 					<Box pt={4}>
 						<Copyright />
 					</Box>

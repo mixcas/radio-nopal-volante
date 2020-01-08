@@ -6,6 +6,7 @@ const initialState = {
     day: 'Lunes',
     time: '13:00 – 15:00 HRS',
     identifier: '#01',
+    title: 'Synth bushwick',
     description: 'Listicle cillum dolor affogato lo-fi four loko normcore pariatur quis. Raclette hell of prism chia typewriter bushwick banjo ethical.',
     color1: '#000000',
     backgroundImageUrl1: '',
