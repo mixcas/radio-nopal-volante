@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/radio-nopal-volante/static/css/main.dc791f60.chunk.css",
-    "main.js": "/radio-nopal-volante/static/js/main.782dba59.chunk.js",
-    "main.js.map": "/radio-nopal-volante/static/js/main.782dba59.chunk.js.map",
+    "main.js": "/radio-nopal-volante/static/js/main.edc2b700.chunk.js",
+    "main.js.map": "/radio-nopal-volante/static/js/main.edc2b700.chunk.js.map",
     "runtime-main.js": "/radio-nopal-volante/static/js/runtime-main.1416a319.js",
     "runtime-main.js.map": "/radio-nopal-volante/static/js/runtime-main.1416a319.js.map",
     "static/js/2.495bb56f.chunk.js": "/radio-nopal-volante/static/js/2.495bb56f.chunk.js",
     "static/js/2.495bb56f.chunk.js.map": "/radio-nopal-volante/static/js/2.495bb56f.chunk.js.map",
     "index.html": "/radio-nopal-volante/index.html",
-    "precache-manifest.5fd3663a68a36aef69ee405ebdd7a53c.js": "/radio-nopal-volante/precache-manifest.5fd3663a68a36aef69ee405ebdd7a53c.js",
+    "precache-manifest.ac4cfe6a698c7fe229e34131cc72f7c8.js": "/radio-nopal-volante/precache-manifest.ac4cfe6a698c7fe229e34131cc72f7c8.js",
     "service-worker.js": "/radio-nopal-volante/service-worker.js",
     "static/css/main.dc791f60.chunk.css.map": "/radio-nopal-volante/static/css/main.dc791f60.chunk.css.map",
     "static/js/2.495bb56f.chunk.js.LICENSE": "/radio-nopal-volante/static/js/2.495bb56f.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1416a319.js",
     "static/js/2.495bb56f.chunk.js",
     "static/css/main.dc791f60.chunk.css",
-    "static/js/main.782dba59.chunk.js"
+    "static/js/main.edc2b700.chunk.js"
   ]
 }

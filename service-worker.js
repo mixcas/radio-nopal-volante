@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/radio-nopal-volante/precache-manifest.5fd3663a68a36aef69ee405ebdd7a53c.js"
+  "/radio-nopal-volante/precache-manifest.ac4cfe6a698c7fe229e34131cc72f7c8.js"
 );
 
 self.addEventListener('message', (event) => {
