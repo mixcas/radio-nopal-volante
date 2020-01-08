@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Circular Pro Book';
-  src: url('/assets/fonts/CircularPro-Book.woff2') format('woff2'),
-  url('/assets/fonts/CircularPro-Book.woff') format('woff');
+  src: url('https://carlossolar.es/radio-nopal-volante/assets/fonts/CircularPro-Book.woff2') format('woff2'),
+  url('https://carlossolar.es/radio-nopal-volante/assets/fonts/CircularPro-Book.woff2') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Noah Upper Lower';
-  src: url('/assets/Nassets/fonts/oahUpperLower-Bold.woff2') format('woff2'),
-  url('/assets/fonts/NoahUpperLower-Bold.woff') format('woff');
+  src: url('https://carlossolar.es/radio-nopal-volante/assets/fonts/NoahUpperLower-Bold.woff2') format('woff2'),
+  url('https://carlossolar.es/radio-nopal-volante/assets/fonts/NoahUpperLower-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
