@@ -60,12 +60,12 @@ const useStyles = makeStyles(theme => ({
   titleContainer: {
     display: 'flex',
     flexWrap: 'nowrap',
-    lineHeight: 1,
+    lineHeight: 1.1,
   },
   title: {
     fontFamily: 'Noah Upper Lower',
     fontSize: 100,
-    marginRight: 16,
+    marginRight: 32,
     whiteSpace: 'pre-line',
     flex: '753px 0 0',
   },
@@ -116,7 +116,7 @@ const Flyer = ({
   const exportFlyer = (id) => {
     htmlToImage.toPng(document.getElementById(id))
       .then(function (dataUrl) {
-        downloadjs(dataUrl, 'volante.png');
+        downloadjs(dataUrl, 'volante.png')
       });
   }
 

@@ -19,7 +19,6 @@ const FlyerForm  = ({
   backgroundColor2,
   setFieldValue,
 }) => {
-  console.log('day')
 
   return (
     <form noValidate autoComplete='off'>
