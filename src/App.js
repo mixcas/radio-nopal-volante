@@ -98,7 +98,7 @@ const useStyles = makeStyles(theme => ({
 	content: {
 		flexGrow: 1,
 		height: '100vh',
-		overflow: 'auto',
+		overflow: 'hidden',
 	},
 	container: {
 		paddingTop: theme.spacing(4),
@@ -140,7 +140,7 @@ const App = () => {
         <FlyerForm/>
 			</Drawer>
 
-			<main className={classes.content}>
+			<main className={classes.content} id='content'>
 				<div className={classes.appBarSpacer} />
 				<Container maxWidth='lg' className={classes.container}>
           <Flyer/>

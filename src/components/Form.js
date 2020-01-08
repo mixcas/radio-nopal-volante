@@ -22,7 +22,6 @@ const FlyerForm  = ({
 
   return (
     <form noValidate autoComplete='off'>
-
       <div>
         <TextField
           margin='normal'

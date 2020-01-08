@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { connect } from 'react-redux'
 import Nopal from 'components/Nopal'
@@ -7,6 +7,7 @@ import Fab from '@material-ui/core/Fab'
 import SaveIcon from '@material-ui/icons/Save'
 import htmlToImage from 'html-to-image';
 import downloadjs from 'downloadjs'
+import { useWindowSize } from 'lib/utilities'
 
 const useStyles = makeStyles(theme => ({
   flyerContainer: {
@@ -14,9 +15,9 @@ const useStyles = makeStyles(theme => ({
     width: 1080,
   },
   exportButton: {
-    position: 'absolute',
-    top: 0,
-    left: 'calc(100% + 16px)',
+    position: 'fixed',
+    bottom: 16,
+    right: 16,
   },
   block: {
     width: 1080,
@@ -97,6 +98,12 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+
+const scrollToFlyer = () => {
+  const { y } = document.getElementById('flyer').getBoundingClientRect()
+  document.getElementById('content').scrollTop = y - (64 * 1.5)
+}
+
 const Flyer = ({
     day,
     time,
@@ -110,13 +117,24 @@ const Flyer = ({
     backgroundImageUrl2,
     backgroundColor2,
 }) => {
+  const { height } = useWindowSize()
+
+  const scale = (height - 64 - 64) / 2160
 
   const classes = useStyles()
 
   const exportFlyer = (id) => {
+    const flyer = document.getElementById('flyer')
+    const transform = flyer.style.transform
+
+    // Reset Scale
+    flyer.style.transform = ''
+
     htmlToImage.toPng(document.getElementById(id))
       .then(function (dataUrl) {
         downloadjs(dataUrl, 'volante.png')
+        flyer.style.transform = transform
+
       });
   }
 
@@ -134,6 +152,10 @@ const Flyer = ({
 
   const blockContent1 = {}
 
+  useLayoutEffect( () => {
+    scrollToFlyer()
+  }, [height])
+
   return (
     <div className={classes.flyerContainer}>
       <Fab
@@ -144,7 +166,12 @@ const Flyer = ({
       >
         <SaveIcon />
       </Fab>
-      <div id='flyer'>
+      <div
+        id='flyer'
+        style={{
+          transform: `scale(${scale})`
+        }}
+      >
         <div
           className={`${classes.block} ${classes.block1} block1`}
           style={block1}
