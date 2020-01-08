@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
 import { connect } from 'react-redux'
 import Nopal from 'components/Nopal'
+import RadioNopalMeta from 'components/RadioNopalMeta'
 
 const useStyles = makeStyles(theme => ({
   block: {
@@ -13,9 +14,9 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: 'center',
 		marginBottom: theme.spacing(4),
     position: 'relative',
+    padding: 60,
   },
   block1: {
-    padding: 60,
   },
   blockContent1: {
     height: '100%',
@@ -34,6 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   schedule: {
     fontSize: 30,
+    marginBottom: 24,
   },
   day: {
     background: '#f70011',
@@ -46,6 +48,7 @@ const useStyles = makeStyles(theme => ({
   titleContainer: {
     display: 'flex',
     flexWrap: 'nowrap',
+    lineHeight: 1,
   },
   title: {
     fontFamily: 'Noah Upper Lower',
@@ -68,6 +71,17 @@ const useStyles = makeStyles(theme => ({
     top: 60,
     right: 60,
     width: 386,
+  },
+  metaCotainer: {
+    display: 'flex',
+    width: '100%',
+    height: '100%',
+    alignItems: 'flex-end',
+
+    '& svg': {
+      width: '100%',
+      height: 728,
+    }
   }
 }))
 
@@ -102,9 +116,14 @@ const Flyer = ({
 
   return (
     <div>
-      <Paper elevation={1} className={`${classes.block} ${classes.block1} block1`} style={block1}>
+      <Paper
+        square
+        elevation={1}
+        className={`${classes.block} ${classes.block1} block1`}
+        style={block1}
+      >
         <div className={classes.nopalContainer}>
-          <Nopal fill={color2}/>
+          <Nopal fill={color1}/>
         </div>
         <div className={`${classes.blockContent1} block-content-1`} style={blockContent1}>
           <div>
@@ -134,6 +153,9 @@ const Flyer = ({
         </div>
       </Paper>
       <Paper elevation={1} className={`${classes.block} ${classes.block2} block2`} style={block2}>
+        <div className={classes.metaCotainer}>
+          <RadioNopalMeta fill={color2}/>
+        </div>
       </Paper>
     </div>
   )

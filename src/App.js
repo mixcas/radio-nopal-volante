@@ -16,13 +16,16 @@ import Flyer from 'components/Flyer'
 
 function Copyright() {
 	return (
-		<Typography variant="body2" color="textSecondary" align="center">
-			{'Copyright © '}
-			<Link color="inherit" href="https://material-ui.com/">
-				Your Website
+		<Typography variant='body2' color='textSecondary' align='center'>
+			{'Creado por '}
+      <Link color='inherit' href='https://carlossolar.es/'>
+				Carlos Solares
+			</Link>
+			{'. Copyright © '}
+      <Link color='inherit' href='http://radionopal.com/'>
+				Radio Nopal
 			</Link>{' '}
 			{new Date().getFullYear()}
-			{'.'}
 		</Typography>
 	)
 }
@@ -117,16 +120,16 @@ const App = () => {
 		<div className={classes.root}>
 			<CssBaseline />
 
-			<AppBar position="absolute" className={classes.appBar}>
+			<AppBar position='absolute' className={classes.appBar}>
 				<Toolbar className={classes.toolbar}>
-					<Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+					<Typography component='h1' variant='h6' color='inherit' noWrap className={classes.title}>
 						Radio Nopal - Volantito
 					</Typography>
 				</Toolbar>
 			</AppBar>
 
 			<Drawer
-				variant="permanent"
+				variant='permanent'
 				classes={{
 					paper: classes.drawerPaper,
 				}}
@@ -137,7 +140,7 @@ const App = () => {
 
 			<main className={classes.content}>
 				<div className={classes.appBarSpacer} />
-				<Container maxWidth="lg" className={classes.container}>
+				<Container maxWidth='lg' className={classes.container}>
           <Flyer/>
 					<Box pt={4}>
 						<Copyright />
