@@ -111,14 +111,14 @@ const Flyer = ({
     backgroundColor2,
 }) => {
 
+  const classes = useStyles()
+
   const exportFlyer = (id) => {
     htmlToImage.toPng(document.getElementById(id))
       .then(function (dataUrl) {
         downloadjs(dataUrl, 'volante.png');
       });
   }
-
-  const classes = useStyles()
 
   const block1 = {
     color: color1,

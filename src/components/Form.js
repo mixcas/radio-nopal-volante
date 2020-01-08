@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { setFieldValue, setErrors } from 'actions/flyerActions'
 import TextField from '@material-ui/core/TextField'
 
+import ColorPicker from 'components/ColorPicker'
+
 const FlyerForm  = ({
   day,
   time,
@@ -94,6 +96,10 @@ const FlyerForm  = ({
           onChange={ e => setFieldValue('color1', e.target.value) }
           value={color1}
         />
+        <ColorPicker
+          value={color1}
+          onChange={ value => setFieldValue('color1', value) }
+        />
       </div>
 
       <div>
@@ -105,6 +111,10 @@ const FlyerForm  = ({
           name='backgroundColor1'
           onChange={ e => setFieldValue('backgroundColor1', e.target.value) }
           value={backgroundColor1}
+        />
+        <ColorPicker
+          value={backgroundColor1}
+          onChange={ value => setFieldValue('backgroundColor1', value) }
         />
       </div>
 
@@ -130,6 +140,10 @@ const FlyerForm  = ({
           onChange={ e => setFieldValue('color2', e.target.value) }
           value={color2}
         />
+        <ColorPicker
+          value={color2}
+          onChange={ value => setFieldValue('color2', value) }
+        />
       </div>
 
       <div>
@@ -141,6 +155,10 @@ const FlyerForm  = ({
           name='backgroundColor2'
           onChange={ e => setFieldValue('backgroundColor2', e.target.value) }
           value={backgroundColor2}
+        />
+        <ColorPicker
+          value={backgroundColor2}
+          onChange={ value => setFieldValue('backgroundColor2', value) }
         />
       </div>
 

@@ -80,6 +80,8 @@ const useStyles = makeStyles(theme => ({
 			easing: theme.transitions.easing.sharp,
 			duration: theme.transitions.duration.enteringScreen,
 		}),
+		height: '100vh',
+		overflow: 'auto',
 	},
 	drawerPaperClose: {
 		overflowX: 'hidden',
