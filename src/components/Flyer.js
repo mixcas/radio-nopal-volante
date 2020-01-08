@@ -1,18 +1,29 @@
 import React from 'react'
-import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
 import { connect } from 'react-redux'
 import Nopal from 'components/Nopal'
 import RadioNopalMeta from 'components/RadioNopalMeta'
+import Fab from '@material-ui/core/Fab'
+import SaveIcon from '@material-ui/icons/Save'
+import htmlToImage from 'html-to-image';
+import downloadjs from 'downloadjs'
 
 const useStyles = makeStyles(theme => ({
+  flyerContainer: {
+    position: 'relative',
+    width: 1080,
+  },
+  exportButton: {
+    position: 'absolute',
+    top: 0,
+    left: 'calc(100% + 16px)',
+  },
   block: {
     width: 1080,
     height: 1080,
     fontFamily: 'Circular Pro Book',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-		marginBottom: theme.spacing(4),
     position: 'relative',
     padding: 60,
   },
@@ -98,6 +109,14 @@ const Flyer = ({
     backgroundImageUrl2,
     backgroundColor2,
 }) => {
+
+  const exportFlyer = (id) => {
+    htmlToImage.toPng(document.getElementById(id))
+      .then(function (dataUrl) {
+        downloadjs(dataUrl, 'volante.png');
+      });
+  }
+
   const classes = useStyles()
 
   const block1 = {
@@ -115,48 +134,59 @@ const Flyer = ({
   const blockContent1 = {}
 
   return (
-    <div>
-      <Paper
-        square
-        elevation={1}
-        className={`${classes.block} ${classes.block1} block1`}
-        style={block1}
+    <div className={classes.flyerContainer}>
+      <Fab
+        color="primary"
+        aria-label="export"
+        className={classes.exportButton}
+        onClick={() => exportFlyer('flyer')}
       >
-        <div className={classes.nopalContainer}>
-          <Nopal fill={color1}/>
-        </div>
-        <div className={`${classes.blockContent1} block-content-1`} style={blockContent1}>
-          <div>
-            <div className={classes.schedule}>
-              <span className={classes.day}>
-                {day}
-              </span>
-              <span className={classes.time}>
-                {time}
-              </span>
-            </div>
-
-            <div className={classes.titleContainer}>
-              <div className={classes.title}>
-                {title}
+        <SaveIcon />
+      </Fab>
+      <div id='flyer'>
+        <div
+          className={`${classes.block} ${classes.block1} block1`}
+          style={block1}
+        >
+          <div className={classes.nopalContainer}>
+            <Nopal fill={color1}/>
+          </div>
+          <div className={`${classes.blockContent1} block-content-1`} style={blockContent1}>
+            <div>
+              <div className={classes.schedule}>
+                <span className={classes.day}>
+                  {day}
+                </span>
+                <span className={classes.time}>
+                  {time}
+                </span>
               </div>
 
-              <div className={classes.identifier}>
-                {identifier}
+              <div className={classes.titleContainer}>
+                <div className={classes.title}>
+                  {title}
+                </div>
+
+                <div className={classes.identifier}>
+                  {identifier}
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className={classes.description}>
-            {description}
+            <div className={classes.description}>
+              {description}
+            </div>
           </div>
         </div>
-      </Paper>
-      <Paper elevation={1} className={`${classes.block} ${classes.block2} block2`} style={block2}>
-        <div className={classes.metaCotainer}>
-          <RadioNopalMeta fill={color2}/>
+        <div
+          className={`${classes.block} ${classes.block2} block2`}
+          style={block2}
+        >
+          <div className={classes.metaCotainer}>
+            <RadioNopalMeta fill={color2}/>
+          </div>
         </div>
-      </Paper>
+    </div>
     </div>
   )
 }
