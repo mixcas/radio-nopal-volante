@@ -45,16 +45,17 @@ const useStyles = makeStyles(theme => ({
   block2: {
   },
   schedule: {
-    fontSize: 30,
+    fontSize: 25,
     marginBottom: 24,
+    lineHeight: 1,
   },
   day: {
     background: '#f70011',
     textTransform: 'uppercase',
     color: '#FFF',
-    padding: '16px 8px',
-    fontSize: 30,
-    marginRight: 8,
+    padding: '0 12px',
+    fontSize: 25,
+    marginRight: 16,
   },
   titleContainer: {
     display: 'flex',
