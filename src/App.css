@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Noah Upper Lower';
-  src: url('/Nassets/fonts/oahUpperLower-Bold.woff2') format('woff2'),
+  src: url('/assets/Nassets/fonts/oahUpperLower-Bold.woff2') format('woff2'),
   url('/assets/fonts/NoahUpperLower-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
