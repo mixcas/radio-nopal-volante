@@ -48,6 +48,7 @@ const FlyerForm  = ({
 
       <div>
         <TextField
+          multiline
           margin='normal'
           fullWidth
           id='title'
