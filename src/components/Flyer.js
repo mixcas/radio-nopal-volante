@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
   block: {
     width: 1080,
-    height: 1080,
+    height: 960,
     fontFamily: 'Circular Pro Book',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
