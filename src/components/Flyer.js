@@ -29,32 +29,31 @@ const useStyles = makeStyles(theme => ({
     padding: 60,
   },
   block1: {
+    padding: '60px 106px 87px 86px',
   },
   blockContent1: {
     height: '100%',
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    paddingTop: 180,
+    paddingTop: 216,
 
     '& > *': {
       flex: '100% 0 0',
     }
-
-
   },
   block2: {
   },
   schedule: {
     fontSize: 25,
-    marginBottom: 24,
+    marginBottom: 20,
     lineHeight: 1,
   },
   day: {
     background: '#f70011',
     textTransform: 'uppercase',
     color: '#FFF',
-    padding: '0 12px',
+    padding: '3px 12px 0',
     fontSize: 25,
     marginRight: 16,
   },
@@ -62,27 +61,30 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexWrap: 'nowrap',
     lineHeight: 1.1,
+    justifyContent: 'space-between',
   },
   title: {
     fontFamily: 'Noah Upper Lower',
-    fontSize: 100,
+    fontSize: 102,
     marginRight: 32,
     whiteSpace: 'pre-line',
-    flex: '753px 0 0',
+    flex: 'auto 1 1',
   },
   identifier: {
     fontFamily: 'Noah Upper Lower',
-    fontSize: 110,
+    fontSize: 105,
+    flex: 'auto 0 0',
   },
   description: {
     alignSelf: 'flex-end',
-    fontSize: 33,
+    fontSize: 38,
     whiteSpace: 'pre-line',
+    lineHeight: '44px',
   },
   nopalContainer: {
     position: 'absolute',
     top: 60,
-    right: 60,
+    right: 86,
     width: 386,
   },
   metaCotainer: {
