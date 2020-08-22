@@ -132,11 +132,10 @@ const Flyer = ({
     // Reset Scale
     flyer.style.transform = ''
 
-    htmlToImage.toPng(document.getElementById(id))
+    htmlToImage.toJpeg(document.getElementById(id), { quality: 0.95 })
       .then(function (dataUrl) {
-        downloadjs(dataUrl, 'volante.png')
+        downloadjs(dataUrl, 'volante.jpg')
         flyer.style.transform = transform
-
       });
   }
 
