@@ -39,7 +39,7 @@ const Menu = () => {
             Radio Nopal - Volantito
           </Typography>
           <Typography variant="caption" display="block">
-            v1.0.3
+            v1.0.4
           </Typography>
         </Box>
         <Box>
