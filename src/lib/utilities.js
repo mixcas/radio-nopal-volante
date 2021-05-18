@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import htmlToImage from 'html-to-image';
+import { toJpeg } from 'html-to-image';
 import downloadjs from 'downloadjs'
 
 export const useWindowSize = () => {
@@ -37,8 +37,8 @@ export const exportFlyer = (id) => {
   // Reset Scale
   flyer.style.transform = ''
 
-  htmlToImage.toJpeg(document.getElementById(id), {
-    quality: 0.85,
+  toJpeg(document.getElementById(id), {
+    quality: 1,
   })
     .then(function (dataUrl) {
       downloadjs(dataUrl, 'volante.jpg')
