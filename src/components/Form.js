@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { setFieldValue, setErrors } from 'actions/flyerActions'
 import TextField from '@material-ui/core/TextField'
 
+import { setFieldValue, setErrors } from 'actions/flyerActions'
 import ColorPicker from 'components/ColorPicker'
 
 const FlyerForm  = ({

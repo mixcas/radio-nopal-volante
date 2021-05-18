@@ -1,16 +1,14 @@
 import React from 'react'
-import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Drawer from '@material-ui/core/Drawer'
 import Box from '@material-ui/core/Box'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Link from '@material-ui/core/Link'
 import './App.css'
 
+import Menu from 'components/Menu'
 import FlyerForm from 'components/Form'
 import Flyer from 'components/Flyer'
 
@@ -45,13 +43,6 @@ const useStyles = makeStyles(theme => ({
 		justifyContent: 'flex-end',
 		padding: '0 8px',
 		...theme.mixins.toolbar,
-	},
-	appBar: {
-		zIndex: theme.zIndex.drawer + 1,
-		transition: theme.transitions.create(['width', 'margin'], {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.leavingScreen,
-		}),
 	},
 	appBarShift: {
 		marginLeft: drawerWidth,
@@ -122,13 +113,7 @@ const App = () => {
 		<div className={classes.root}>
 			<CssBaseline />
 
-			<AppBar position='absolute' className={classes.appBar}>
-				<Toolbar className={classes.toolbar}>
-					<Typography component='h1' variant='h6' color='inherit' noWrap className={classes.title}>
-						Radio Nopal - Volantito
-					</Typography>
-				</Toolbar>
-			</AppBar>
+      <Menu/>
 
 			<Drawer
 				variant='permanent'

@@ -1,27 +1,22 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useLayoutEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { connect } from 'react-redux'
+
 import Nopal from 'components/Nopal'
 import RadioNopalMeta from 'components/RadioNopalMeta'
-import Fab from '@material-ui/core/Fab'
-import SaveIcon from '@material-ui/icons/Save'
-import htmlToImage from 'html-to-image';
-import downloadjs from 'downloadjs'
 import { useWindowSize } from 'lib/utilities'
+
+const FLYER_HEIGHT = 1920
+const FLYER_WIDTH = 1080
 
 const useStyles = makeStyles(theme => ({
   flyerContainer: {
     position: 'relative',
-    width: 1080,
-  },
-  exportButton: {
-    position: 'fixed',
-    bottom: 16,
-    right: 16,
+    width: FLYER_WIDTH,
   },
   block: {
-    width: 1080,
-    height: 960,
+    width: FLYER_WIDTH,
+    height: FLYER_HEIGHT / 2,
     fontFamily: 'Circular Pro Book',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -121,23 +116,10 @@ const Flyer = ({
 }) => {
   const { height } = useWindowSize()
 
-  const scale = (height - 64 - 64) / 2160
+  const scale = (height - 64 - 64) / FLYER_HEIGHT
 
   const classes = useStyles()
 
-  const exportFlyer = (id) => {
-    const flyer = document.getElementById('flyer')
-    const transform = flyer.style.transform
-
-    // Reset Scale
-    flyer.style.transform = ''
-
-    htmlToImage.toJpeg(document.getElementById(id), { quality: 0.95 })
-      .then(function (dataUrl) {
-        downloadjs(dataUrl, 'volante.jpg')
-        flyer.style.transform = transform
-      });
-  }
 
   const block1 = {
     color: color1,
@@ -159,14 +141,6 @@ const Flyer = ({
 
   return (
     <div className={classes.flyerContainer}>
-      <Fab
-        color="primary"
-        aria-label="export"
-        className={classes.exportButton}
-        onClick={() => exportFlyer('flyer')}
-      >
-        <SaveIcon />
-      </Fab>
       <div
         id='flyer'
         style={{
