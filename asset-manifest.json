@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/radio-nopal-volante/static/css/main.dc791f60.chunk.css",
-    "main.js": "/radio-nopal-volante/static/js/main.d297b8a9.chunk.js",
-    "main.js.map": "/radio-nopal-volante/static/js/main.d297b8a9.chunk.js.map",
+    "main.css": "/radio-nopal-volante/static/css/main.fdee2146.chunk.css",
+    "main.js": "/radio-nopal-volante/static/js/main.e8699a38.chunk.js",
+    "main.js.map": "/radio-nopal-volante/static/js/main.e8699a38.chunk.js.map",
     "runtime-main.js": "/radio-nopal-volante/static/js/runtime-main.1416a319.js",
     "runtime-main.js.map": "/radio-nopal-volante/static/js/runtime-main.1416a319.js.map",
     "static/js/2.4bdd35eb.chunk.js": "/radio-nopal-volante/static/js/2.4bdd35eb.chunk.js",
     "static/js/2.4bdd35eb.chunk.js.map": "/radio-nopal-volante/static/js/2.4bdd35eb.chunk.js.map",
     "index.html": "/radio-nopal-volante/index.html",
-    "precache-manifest.34a4f9849090d54a81df4c7977fb451e.js": "/radio-nopal-volante/precache-manifest.34a4f9849090d54a81df4c7977fb451e.js",
+    "precache-manifest.fcfb16a6bd7352cafc7e6ea1548cd3f7.js": "/radio-nopal-volante/precache-manifest.fcfb16a6bd7352cafc7e6ea1548cd3f7.js",
     "service-worker.js": "/radio-nopal-volante/service-worker.js",
-    "static/css/main.dc791f60.chunk.css.map": "/radio-nopal-volante/static/css/main.dc791f60.chunk.css.map",
+    "static/css/main.fdee2146.chunk.css.map": "/radio-nopal-volante/static/css/main.fdee2146.chunk.css.map",
     "static/js/2.4bdd35eb.chunk.js.LICENSE": "/radio-nopal-volante/static/js/2.4bdd35eb.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.1416a319.js",
     "static/js/2.4bdd35eb.chunk.js",
-    "static/css/main.dc791f60.chunk.css",
-    "static/js/main.d297b8a9.chunk.js"
+    "static/css/main.fdee2146.chunk.css",
+    "static/js/main.e8699a38.chunk.js"
   ]
 }
